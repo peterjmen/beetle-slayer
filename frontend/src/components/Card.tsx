@@ -9,7 +9,7 @@ function Card({ name, img, info }: CardProps) {
     <div className="card">
       <div className="top">
         <h2 className="name">{name}</h2>
-        <img src={img} style={{ width: "20%", height: "20%" }} />
+        <img src={img} style={{ width: "15%", height: "15%" }} />
       </div>
       <div className="bottom">
         <p className="info">{info}</p>
