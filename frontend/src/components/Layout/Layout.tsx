@@ -1,4 +1,4 @@
-import { Box, Center } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -6,7 +6,7 @@ interface LayoutProps {
 
 function Layout({ children }: LayoutProps) {
   return (
-    <Box backgroundColor="grey" width="100vw" height="100vh" textAlign="center">
+    <Box backgroundColor="grey" width="100vw" height="100vh" py="1rem">
       {children}
     </Box>
   );
