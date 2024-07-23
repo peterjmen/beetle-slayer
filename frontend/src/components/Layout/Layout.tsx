@@ -6,7 +6,7 @@ interface LayoutProps {
 
 function Layout({ children }: LayoutProps) {
   return (
-    <Box backgroundColor="grey" width="100vw" height="100vh" py="1rem">
+    <Box backgroundColor="darkgray" width="100vw" height="100vh" py="1rem">
       {children}
     </Box>
   );

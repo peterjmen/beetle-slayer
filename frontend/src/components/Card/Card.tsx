@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Heading, Image, Text } from "@chakra-ui/react";
 
 type CardProps = {
   name: string;
@@ -8,14 +8,20 @@ type CardProps = {
 
 function Card({ name, img, info }: CardProps) {
   return (
-    <Box textColor="maroon" className="card">
-      <div className="top">
-        <h2 className="name">{name}</h2>
-        <img src={img} style={{ width: "15%", height: "15%" }} />
-      </div>
-      <div className="bottom">
-        <p className="info">{info}</p>
-      </div>
+    <Box
+      className="card"
+      textColor="maroon"
+      textAlign="center"
+      backgroundColor="pink"
+      padding={4}
+      border={"2px solid maroon"}
+      margin={4}
+    >
+      <Heading className="cardTitle" fontSize={"x-large"}>
+        {name}
+      </Heading>
+      <Image className="cardPicture" src={img} alt="bugs" height={"350px"} />
+      <Text className="cardDetails">{info}</Text>
     </Box>
   );
 }

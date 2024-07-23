@@ -6,7 +6,7 @@ import creature_list from "./creature_list";
 function App() {
   return (
     <>
-      <Heading textAlign="center" color="orange">
+      <Heading textAlign="center" color="maroon">
         Vite + React
       </Heading>
       <CardList creatures={creature_list} />
