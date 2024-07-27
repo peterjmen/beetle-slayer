@@ -1,24 +1,28 @@
 export type Creature = {
   name: string;
-  imgURL: string;
+  img: string;
   info: string;
+  size_scale: number;
 };
 
 const creature_list: Creature[] = [
   {
     name: "blue",
-    imgURL: "/images/creatures/blue_bug.png",
+    img: "/images/creatures/blue_bug.png",
     info: "blue creature list deets",
+    size_scale: 100,
   },
   {
     name: "red",
-    imgURL: "/images/creatures/red_bug.png",
+    img: "/images/creatures/red_bug.png",
     info: "red creature list deets",
+    size_scale: 100,
   },
   {
     name: "green",
-    imgURL: "images/creatures/green_bug.png",
+    img: "images/creatures/green_bug.png",
     info: "green creature deets",
+    size_scale: 100,
   },
 ];
 
