@@ -1,4 +1,4 @@
-const example_character = {
+const example_hero = {
   name: "Example Character",
   img: "./images/characters/small_rugged.png",
   strength: 3,
@@ -7,4 +7,4 @@ const example_character = {
   hitpoints: 100,
 };
 
-export default example_character;
+export default example_hero;

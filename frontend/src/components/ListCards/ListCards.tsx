@@ -8,7 +8,13 @@ type ListCardsProps = {
 
 function ListCards({ list, CardComponent, orientation }: ListCardsProps) {
   return (
-    <Box display="flex" flexDirection={orientation} gap={2} >
+    <Box
+      p={2}
+      backgroundColor={"grey"}
+      display="flex"
+      flexDirection={orientation}
+      gap={2}
+    >
       {list.map((item, index) => (
         <CardComponent key={index} {...item} />
       ))}

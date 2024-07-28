@@ -1,10 +1,10 @@
 import { Text } from "@chakra-ui/react";
 import BaseCardTemplate from "../BaseCardTemplate/BaseCardTemplate";
 
-const heroCardSizeScalingFactor = 4;
+const heroCardSizeScalingFactor = 3;
 const scaleMultiplier = 100;
 
-type CharacterCardProps = {
+type HeroCardProps = {
   name: string;
   img: string;
   strength: number;
@@ -13,13 +13,7 @@ type CharacterCardProps = {
   hitpoints: number;
 };
 
-function CharacterCard({
-  name,
-  img,
-  strength,
-  dexterity,
-  spirit,
-}: CharacterCardProps) {
+function HeroCard({ name, img, strength, dexterity, spirit }: HeroCardProps) {
   const hero_card_size = `${scaleMultiplier * heroCardSizeScalingFactor}px`;
   return (
     <BaseCardTemplate name={name} img={img} cardSize={hero_card_size}>
@@ -32,4 +26,4 @@ function CharacterCard({
   );
 }
 
-export default CharacterCard;
+export default HeroCard;

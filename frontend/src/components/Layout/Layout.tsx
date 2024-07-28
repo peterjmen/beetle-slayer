@@ -1,26 +1,43 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Heading, VStack, Text } from "@chakra-ui/react";
+import { useCombatLog } from "../../Contexts/CombatLog/CombatLogContext";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 function Layout({ children }: LayoutProps) {
+  const { combatLog } = useCombatLog();
+
   return (
     <Box
       display="grid"
-      gridTemplateRows="auto 85% 10%"
+      gridTemplateRows="5% 85% 10%"
       backgroundColor="darkgray"
       width="100vw"
       height="100vh"
-      py="1rem"
     >
-      <Heading textAlign="center" color="maroon">
+      <Heading
+        textAlign="center"
+        color="maroon"
+        backgroundColor={"greenyellow"}
+        style={{ height: "100%" }}
+      >
         Vite + React
       </Heading>
-      <Box width="100%" height="100%" display="grid">
-        {children}
-      </Box>
-      <Box backgroundColor={"Highlight"}>Combat Log</Box>
+      <Box>{children}</Box>
+      <VStack
+        pt={1}
+        // sx={{ boxSizing: "border-box" }} // Makes sure padding is included in height calculation
+        backgroundColor={"burntOrange"}
+        overflowY="auto"
+        align="left"
+      >
+        {combatLog.map((log, index) => (
+          <Text key={index} sx={{ whiteSpace: "nowrap", lineHeight: "0.5" }}>
+            {log}
+          </Text>
+        ))}
+      </VStack>
     </Box>
   );
 }

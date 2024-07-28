@@ -1,6 +1,6 @@
 import BaseCardTemplate from "../BaseCardTemplate/BaseCardTemplate";
 
-const creatureCardSizeScalingFactor = 2;
+const creatureCardSizeScalingFactor = 1.5;
 const scaleMultiplier = 100;
 
 type CreatureCardProps = {
